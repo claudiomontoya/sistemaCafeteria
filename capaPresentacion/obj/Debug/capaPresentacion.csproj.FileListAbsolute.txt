@@ -9,3 +9,10 @@ C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteri
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.exe
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.pdb
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.MT_categorias.resources
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaEntidades.dll
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaNegocio.dll
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaDatos.dll
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaEntidades.pdb
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaNegocio.pdb
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaDatos.pdb
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete

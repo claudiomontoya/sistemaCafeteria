@@ -1,4 +1,5 @@
-﻿using System;
+﻿using capaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace capaPresentacion
 {
     public partial class MT_categorias : Form
     {
+        categoriaBL categoria = new categoriaBL();
+
         public MT_categorias()
         {
             InitializeComponent();
+        }
+
+        private void MT_categorias_Load(object sender, EventArgs e)
+        {
+           dataGridView1.DataSource = categoria.Listado().Tables[0];
+
         }
     }
 }

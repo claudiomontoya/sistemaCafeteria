@@ -97,5 +97,15 @@
   <ItemGroup>
     <None Include="Resources\Administrator-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\capaEntidades\capaEntidades.csproj">
+      <Project>{c5d1f919-6932-4cb9-b031-1dceff0312ad}</Project>
+      <Name>capaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capaNegocio\capaNegocio.csproj">
+      <Project>{44fe5f1e-9977-4d45-bb85-11b1cac0ad45}</Project>
+      <Name>capaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
