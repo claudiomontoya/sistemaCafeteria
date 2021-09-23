@@ -21,5 +21,12 @@ namespace capaPresentacion
         {
 
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MT_categorias obj = new MT_categorias();
+           // obj.MdiParent = this;
+            obj.ShowDialog();
+        }
     }
 }
