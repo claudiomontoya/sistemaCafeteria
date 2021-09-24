@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidades
 {
-    class CategoriasEntity
+    public class CategoriasEntity
     {
         //atributos
         public int codigo { get; set; }
