@@ -24,6 +24,19 @@ namespace capaPresentacion
         private void MT_categorias_Load(object sender, EventArgs e)
         {
             listar();
+            bloqueo();
+        }
+
+        private void bloqueo() {
+            btn_agregar.Enabled = true;
+            btn_eliminar.Enabled = false;
+            btn_modificar.Enabled = false;
+        }
+        private void desbloqueo()
+        {
+            btn_agregar.Enabled = false;
+            btn_eliminar.Enabled = true;
+            btn_modificar.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,13 +45,17 @@ namespace capaPresentacion
         }
 
         private void limpiar() {
+            txt_codigo.Enabled = true;
             txt_codigo.Clear();
             txt_nombre.Clear();
             txt_codigo.Focus();
+            bloqueo();
         }
 
         private void listar() {
             dataGridView1.DataSource = categoria.Listado().Tables[0];
+            dataGridView1.Columns[0].Width = 80;
+            dataGridView1.Columns[1].Width = 235;
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -48,9 +65,6 @@ namespace capaPresentacion
                 MessageBox.Show("Complete todos los datos..!!","Error de datos",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
-
-
-
             CategoriasEntity cat = new CategoriasEntity();
             cat.codigo = int.Parse(txt_codigo.Text);
             cat.nombre = txt_nombre.Text;
@@ -66,6 +80,46 @@ namespace capaPresentacion
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          txt_codigo.Text =  dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+          txt_nombre.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+          txt_codigo.Enabled = false;
+          desbloqueo();
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            if (txt_codigo.Text == "" || txt_nombre.Text == "")
+            {
+                MessageBox.Show("Complete todos los datos..!!", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            CategoriasEntity cat = new CategoriasEntity();
+            cat.codigo = int.Parse(txt_codigo.Text);
+            cat.nombre = txt_nombre.Text;
+            categoria.modificar(cat);
+            listar();
+            limpiar();
+
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            CategoriasEntity cat = new CategoriasEntity();
+            cat.codigo = int.Parse(txt_codigo.Text);
+            categoria.eliminar(cat);
+            listar();
+            limpiar();
+        }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = categoria.buscar(txt_buscar.Text).Tables[0];
+            dataGridView1.Columns[0].Width = 80;
+            dataGridView1.Columns[1].Width = 235;
         }
     }
 }
