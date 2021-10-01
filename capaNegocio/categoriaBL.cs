@@ -18,6 +18,15 @@ namespace capaNegocio
             return dato.Listado("SELECT * FROM CATEGORIAS");
         }
 
+        public bool validarCodigo(int codigo) {
+            DataSet obj = dato.Listado("SELECT * FROM CATEGORIAS WHERE CODIGO=" + codigo + "");
+            if (obj.Tables[0].Rows.Count == 1)
+                return true;
+            else
+                return false;
+
+        }
+
         public DataSet buscar(string nombre)
         {
             return dato.Listado("SELECT * FROM CATEGORIAS WHERE NOMBRE LIKE '%"+ nombre +"%' ");

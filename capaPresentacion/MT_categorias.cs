@@ -65,6 +65,13 @@ namespace capaPresentacion
                 MessageBox.Show("Complete todos los datos..!!","Error de datos",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
+
+            if (categoria.validarCodigo(int.Parse(txt_codigo.Text)))
+            {
+                MessageBox.Show("El codigo ya se encuentra registrado!!", "Error en codigo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             CategoriasEntity cat = new CategoriasEntity();
             cat.codigo = int.Parse(txt_codigo.Text);
             cat.nombre = txt_nombre.Text;
@@ -92,27 +99,34 @@ namespace capaPresentacion
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            if (txt_codigo.Text == "" || txt_nombre.Text == "")
+            if (MessageBox.Show("Desea modificar el Registro", "modificar", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                MessageBox.Show("Complete todos los datos..!!", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            CategoriasEntity cat = new CategoriasEntity();
-            cat.codigo = int.Parse(txt_codigo.Text);
-            cat.nombre = txt_nombre.Text;
-            categoria.modificar(cat);
-            listar();
-            limpiar();
 
+                if (txt_codigo.Text == "" || txt_nombre.Text == "")
+                {
+                    MessageBox.Show("Complete todos los datos..!!", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                CategoriasEntity cat = new CategoriasEntity();
+                cat.codigo = int.Parse(txt_codigo.Text);
+                cat.nombre = txt_nombre.Text;
+                categoria.modificar(cat);
+                listar();
+                limpiar();
+            }
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            CategoriasEntity cat = new CategoriasEntity();
-            cat.codigo = int.Parse(txt_codigo.Text);
-            categoria.eliminar(cat);
-            listar();
-            limpiar();
+
+            if (MessageBox.Show("Desea eliminar el Registro", "eliminar", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                CategoriasEntity cat = new CategoriasEntity();
+                cat.codigo = int.Parse(txt_codigo.Text);
+                categoria.eliminar(cat);
+                listar();
+                limpiar();
+            }
         }
 
         private void txt_buscar_TextChanged(object sender, EventArgs e)
@@ -120,6 +134,24 @@ namespace capaPresentacion
             dataGridView1.DataSource = categoria.buscar(txt_buscar.Text).Tables[0];
             dataGridView1.Columns[0].Width = 80;
             dataGridView1.Columns[1].Width = 235;
+        }
+
+        private void txt_codigo_Leave(object sender, EventArgs e)
+        {
+            if (txt_codigo.Text != "")
+            {
+                if (categoria.validarCodigo(int.Parse(txt_codigo.Text)))
+                {
+                    MessageBox.Show("El codigo ya se encuentra registrado!!", "Error en codigo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_codigo.Text = "";
+                    txt_codigo.Focus();
+                }
+            }
+        }
+
+        private void btn_excel_Click(object sender, EventArgs e)
+        {
+            global.GridAExcel(dataGridView1);
         }
     }
 }

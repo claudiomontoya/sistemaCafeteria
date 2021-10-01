@@ -16,3 +16,4 @@ C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteri
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaNegocio.pdb
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\bin\Debug\capaDatos.pdb
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.csproj.ResolveComReference.cache
