@@ -28,5 +28,17 @@ namespace capaPresentacion
            // obj.MdiParent = this;
             obj.ShowDialog();
         }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MT_proveedores obj = new MT_proveedores();
+            obj.ShowDialog();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MT_producto obj = new MT_producto();
+            obj.ShowDialog();
+        }
     }
 }

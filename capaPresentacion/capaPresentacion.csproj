@@ -64,6 +64,12 @@
     <Compile Include="MT_categorias.Designer.cs">
       <DependentUpon>MT_categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="MT_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MT_producto.Designer.cs">
+      <DependentUpon>MT_producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="MT_proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MT_categorias.resx">
       <DependentUpon>MT_categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MT_producto.resx">
+      <DependentUpon>MT_producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MT_proveedores.resx">
       <DependentUpon>MT_proveedores.cs</DependentUpon>
