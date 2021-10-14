@@ -56,8 +56,12 @@ namespace capaPresentacion
                 MessageBox.Show("Complete todos los datos..!!", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (producto.validarCodigo(int.Parse(txt_codigo.Text)))
+            {
+                MessageBox.Show("El codigo ya se encuentra registrado!!", "Error en codigo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-          
             ProductosEntity prod = new ProductosEntity();
             prod.codigo = int.Parse(txt_codigo.Text);
             prod.nombre = txt_nombre.Text;

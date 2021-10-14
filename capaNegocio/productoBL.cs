@@ -25,6 +25,14 @@ namespace capaNegocio
             return dato.ejecutar("INSERT INTO PRODUCTOS(CODIGO,NOMBRE,COD_CATEGORIA,COD_PROVEEDOR,PRECIO) VALUES(" + producto.codigo + ",'" + producto.nombre + "',"+producto.cod_categoria+","+producto.cod_proveedor+","+producto.precio+" )");
         }
 
+        public bool validarCodigo(int codigo)
+        {
+            DataSet obj = dato.Listado("SELECT * FROM PRODUCTOS WHERE CODIGO=" + codigo + "");
+            if (obj.Tables[0].Rows.Count == 1)
+                return true;
+            else
+                return false;
 
+        }
     }
 }
