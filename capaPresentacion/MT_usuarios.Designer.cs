@@ -44,6 +44,8 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_reclave = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -52,6 +54,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txt_reclave);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txt_clave);
             this.groupBox1.Controls.Add(this.label2);
@@ -98,9 +102,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Usuario";
             // 
             // txt_nombre
             // 
@@ -232,6 +236,25 @@
             this.btn_limpiar.UseVisualStyleBackColor = true;
             this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(281, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Re-Clave";
+            // 
+            // txt_reclave
+            // 
+            this.txt_reclave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_reclave.Location = new System.Drawing.Point(349, 132);
+            this.txt_reclave.MaxLength = 20;
+            this.txt_reclave.Name = "txt_reclave";
+            this.txt_reclave.PasswordChar = '*';
+            this.txt_reclave.Size = new System.Drawing.Size(160, 26);
+            this.txt_reclave.TabIndex = 6;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,5 +295,7 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_limpiar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_reclave;
     }
 }

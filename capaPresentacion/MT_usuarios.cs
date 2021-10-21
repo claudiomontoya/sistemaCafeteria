@@ -24,7 +24,7 @@ namespace capaPresentacion
         private void btn_agregar_Click(object sender, EventArgs e)
         {
 
-            if (validarDatos())
+            if (validarDatos(0))
             {
                 return;
             }
@@ -43,7 +43,7 @@ namespace capaPresentacion
             if (MessageBox.Show("Desea modificar el Registro", "modificar", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
 
-                if (validarDatos())
+                if (validarDatos(1))
                 {
                     return;
                 }
@@ -114,6 +114,7 @@ namespace capaPresentacion
             txt_codigo.Clear();
             txt_nombre.Clear();
             txt_clave.Clear();
+            txt_reclave.Clear();
             txt_codigo.Focus();
             bloqueo();
         }
@@ -132,7 +133,7 @@ namespace capaPresentacion
             bloqueo();
         }
 
-        private bool validarDatos() {
+        private bool validarDatos(int tipo) {
 
             bool estado = false;
 
@@ -143,7 +144,7 @@ namespace capaPresentacion
                 return estado;
             }
 
-            if (usuario.validarCodigo(txt_codigo.Text))
+            if (tipo == 0 && usuario.validarCodigo(txt_codigo.Text))
             {
                 MessageBox.Show("El codigo ya se encuentra registrado!!", "Error en codigo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 estado = true;
@@ -153,6 +154,13 @@ namespace capaPresentacion
             if (txt_clave.Text.Length < 8)
             {
                 MessageBox.Show("La clave no tienen el largo minimo de 8..!!", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                estado = true;
+                return estado;
+            }
+
+            if (txt_clave.Text != txt_reclave.Text)
+            {
+                MessageBox.Show("La clave no coincide..!!", "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 estado = true;
                 return estado;
             }
