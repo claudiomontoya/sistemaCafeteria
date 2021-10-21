@@ -19,3 +19,4 @@ C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteri
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.csproj.ResolveComReference.cache
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.MT_proveedores.resources
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.MT_producto.resources
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.Usuarios.resources

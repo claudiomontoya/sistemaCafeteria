@@ -40,5 +40,11 @@ namespace capaPresentacion
             MT_producto obj = new MT_producto();
             obj.ShowDialog();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuarios obj = new Usuarios();
+            obj.ShowDialog();
+        }
     }
 }

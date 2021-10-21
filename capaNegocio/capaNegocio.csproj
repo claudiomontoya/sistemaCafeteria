@@ -45,6 +45,7 @@
     <Compile Include="productoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="proveedorBL.cs" />
+    <Compile Include="usuarioBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\capaDatos\capaDatos.csproj">

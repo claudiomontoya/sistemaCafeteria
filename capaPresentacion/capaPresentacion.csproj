@@ -76,6 +76,12 @@
     <Compile Include="MT_proveedores.Designer.cs">
       <DependentUpon>MT_proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="MT_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MT_usuarios.Designer.cs">
+      <DependentUpon>MT_usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MenuCafeteria.resx">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MT_proveedores.resx">
       <DependentUpon>MT_proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MT_usuarios.resx">
+      <DependentUpon>MT_usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
