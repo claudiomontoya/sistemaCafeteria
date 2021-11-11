@@ -48,5 +48,10 @@ namespace capaNegocio
         {
             return dato.ejecutar("DELETE FROM  USUARIOS  WHERE CODIGO='" + usuario.codigo + "'");
         }
+
+        public DataSet loginUsuario(string codigo, string clave)
+        {
+            return dato.Listado("SELECT * FROM USUARIOS WHERE codigo='"+ codigo +"' and clave='"+clave+"'");
+        }
     }
 }

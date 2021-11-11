@@ -19,6 +19,10 @@ namespace capaPresentacion
 
         private void MenuCafeteria_Load(object sender, EventArgs e)
         {
+            Login obj = new Login();
+            obj.ShowDialog();
+
+            estatus_nombre.Text = global.nombre;
 
         }
 
@@ -44,6 +48,15 @@ namespace capaPresentacion
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Usuarios obj = new Usuarios();
+            obj.ShowDialog();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            global.usuario = "";
+            global.nombre = "";
+            estatus_nombre.Text = "";
+            Login obj = new Login();
             obj.ShowDialog();
         }
     }

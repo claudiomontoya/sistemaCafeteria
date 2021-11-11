@@ -9,7 +9,8 @@ namespace capaPresentacion
 {
    static class global
     {
-
+        static public string usuario;
+        static public string nombre;
         static public void GridAExcel(DataGridView ElGrid)
         {
 

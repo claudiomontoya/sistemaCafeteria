@@ -73,6 +73,16 @@ namespace capaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coffee_shop_logo_template_design_5a0e3cea955fde66f5e8e4e07c8759a1_screen {
+            get {
+                object obj = ResourceManager.GetObject("coffee-shop-logo-template-design-5a0e3cea955fde66f5e8e4e07c8759a1_screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_file_icon {
             get {
                 object obj = ResourceManager.GetObject("delete-file-icon", resourceCulture);
