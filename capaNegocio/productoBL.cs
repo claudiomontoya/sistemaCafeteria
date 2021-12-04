@@ -20,6 +20,13 @@ namespace capaNegocio
                                  " FROM  categorias INNER JOIN productos ON categorias.codigo = productos.cod_categoria INNER JOIN proveedores ON productos.cod_proveedor = proveedores.codigo");
         }
 
+        public DataSet Listado(string texto)
+        {
+            return dato.Listado("SELECT productos.codigo, productos.nombre, categorias.nombre AS categoria, proveedores.nombre AS proveedor, productos.precio" +
+                                 " FROM  categorias INNER JOIN productos ON categorias.codigo = productos.cod_categoria INNER JOIN proveedores ON productos.cod_proveedor = proveedores.codigo where productos.nombre like '%"+texto+"%'");
+        }
+
+
         public int guardar(ProductosEntity producto)
         {
             return dato.ejecutar("INSERT INTO PRODUCTOS(CODIGO,NOMBRE,COD_CATEGORIA,COD_PROVEEDOR,PRECIO) VALUES(" + producto.codigo + ",'" + producto.nombre + "',"+producto.cod_categoria+","+producto.cod_proveedor+","+producto.precio+" )");

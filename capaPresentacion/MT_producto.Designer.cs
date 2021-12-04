@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cb_proveedor = new System.Windows.Forms.ComboBox();
+            this.cb_categoria = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,10 +48,6 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
-            this.cb_categoria = new System.Windows.Forms.ComboBox();
-            this.cb_proveedor = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -72,6 +72,42 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese Datos";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 225);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Proveedor";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 181);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Categoria";
+            // 
+            // cb_proveedor
+            // 
+            this.cb_proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_proveedor.FormattingEnabled = true;
+            this.cb_proveedor.Location = new System.Drawing.Point(115, 222);
+            this.cb_proveedor.Name = "cb_proveedor";
+            this.cb_proveedor.Size = new System.Drawing.Size(303, 24);
+            this.cb_proveedor.TabIndex = 7;
+            // 
+            // cb_categoria
+            // 
+            this.cb_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_categoria.FormattingEnabled = true;
+            this.cb_categoria.Location = new System.Drawing.Point(115, 181);
+            this.cb_categoria.Name = "cb_categoria";
+            this.cb_categoria.Size = new System.Drawing.Size(303, 24);
+            this.cb_categoria.TabIndex = 6;
             // 
             // label3
             // 
@@ -146,6 +182,7 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(449, 26);
             this.txt_buscar.TabIndex = 1;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             // 
             // dataGridView1
             // 
@@ -232,42 +269,6 @@
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_limpiar.UseVisualStyleBackColor = true;
-            // 
-            // cb_categoria
-            // 
-            this.cb_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_categoria.FormattingEnabled = true;
-            this.cb_categoria.Location = new System.Drawing.Point(115, 181);
-            this.cb_categoria.Name = "cb_categoria";
-            this.cb_categoria.Size = new System.Drawing.Size(303, 24);
-            this.cb_categoria.TabIndex = 6;
-            // 
-            // cb_proveedor
-            // 
-            this.cb_proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_proveedor.FormattingEnabled = true;
-            this.cb_proveedor.Location = new System.Drawing.Point(115, 222);
-            this.cb_proveedor.Name = "cb_proveedor";
-            this.cb_proveedor.Size = new System.Drawing.Size(303, 24);
-            this.cb_proveedor.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 181);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Categoria";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 225);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Proveedor";
             // 
             // MT_producto
             // 

@@ -72,5 +72,10 @@ namespace capaPresentacion
             listar();
            // limpiar();
         }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

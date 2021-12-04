@@ -61,5 +61,10 @@ namespace capaPresentacion
 
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
