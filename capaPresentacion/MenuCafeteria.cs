@@ -65,5 +65,11 @@ namespace capaPresentacion
             TR_Pedido obj = new TR_Pedido();
             obj.Show();
         }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TR_venta obj = new TR_venta();
+            obj.Show();
+        }
     }
 }

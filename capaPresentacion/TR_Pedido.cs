@@ -103,5 +103,11 @@ namespace capaPresentacion
             txt_total.Text = total.ToString();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MT_producto obj = new MT_producto();
+            obj.ShowDialog();
+        }
     }
 }

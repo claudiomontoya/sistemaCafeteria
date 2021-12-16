@@ -24,3 +24,4 @@ C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteri
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.TR_Pedido.resources
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.BUS_cliente.resources
 C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.BUS_producto.resources
+C:\Users\Claudio\Desktop\VirginioGomez\Construccion de Software\Sistema Cafeteria\SistemaCafeteria\capaPresentacion\obj\Debug\capaPresentacion.TR_venta.resources

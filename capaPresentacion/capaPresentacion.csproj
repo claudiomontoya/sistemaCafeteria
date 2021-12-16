@@ -108,6 +108,12 @@
     <Compile Include="TR_Pedido.Designer.cs">
       <DependentUpon>TR_Pedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="TR_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TR_venta.Designer.cs">
+      <DependentUpon>TR_venta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BUS_cliente.resx">
       <DependentUpon>BUS_cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="TR_Pedido.resx">
       <DependentUpon>TR_Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TR_venta.resx">
+      <DependentUpon>TR_venta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

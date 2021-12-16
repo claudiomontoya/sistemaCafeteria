@@ -33,5 +33,17 @@ namespace capaNegocio
         {
             return dato.ejecutar("INSERT INTO detalle_pedido(id_pedido, codigo_producto, cantidad, precio) VALUES(" + id_pedido + "," + codigo_producto + "," + cantidad + "," + precio + " )");
         }
+
+        public DataSet listarPedido(int numero)
+        {
+            return dato.Listado("sp_listar_pedido "+numero+"");
+        }
+
+        public int guardarVenta(VentaEntity venta)
+        {
+            return dato.ejecutar("INSERT INTO VENTA(id_pedido, estado, fecha, usuario, tipo_pago, numero, banco, titular, fecha_cheque, numero_cuenta) VALUES("+venta.id_pedido+ ", '"+venta.estado+ "', '" + venta.fecha + "', '" + venta.usuario+"', '"+venta.tipo_pago+"', " + venta.numero + ", '" + venta.banco+"', '"+venta.titular+"', '" + venta.fecha_cheque + "', '" + venta.numero_cuenta+"'); update pedido set estado='finalizado' where id="+ venta.id_pedido+"");
+        }
+
+
     }
 }

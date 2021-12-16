@@ -49,6 +49,7 @@
     <Compile Include="ProveedoresEntity.cs" />
     <Compile Include="TrabajadorEntity.cs" />
     <Compile Include="UsuariosEntity.cs" />
+    <Compile Include="VentaEntity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
